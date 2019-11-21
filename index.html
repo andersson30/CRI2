@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--ng-declara el documento para que angular pueda acceder  A TODO EL DOCUMENTO-->
+<html ng-app='myApp'>
+<head>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="bs/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="bs/angular.min.js"></script>
+    <script type="text/javascript" src="bs/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="bs/customjs.js"></script>
+    <style type="text/css">
+    table,th,td{
+        border:1px solid black;
+    }
+    </style> 
+</head>
+
+<body ng-controller='MyController'>
+   <div>
+     <form enctype="multipart/form-data">
+     <input type="file" id="file">
+     <button type="submit" value='submit' ng-click="uploadExcel()">Upload File</button>
+     <button type="submit" value='submit' ng-click="LeerExcel()">Mostrar</button>
+    </form>
+   </div> 
+   <div>
+     <table id="myTable">
+       <thead>
+           <tr>
+           <th>wavelength</th>
+           <th>intensity</th>
+            </tr>
+       </thead>
+       <tbody>
+         
+        <!--aqui imprime tabla-->
+       </tbody>
+         
+    
+        
+        <!--aqui imprime tabla-->
+       
+    </table>
+  </div> 
+ 
+ <!-- <button ng-click="LeerExcel()">mostrar</button>  -->
+<!--< <p>{{ mensaje |json}}</p>-->
+       
+ <h2>{{mensaje1}} <br/></h2>
+ <h1>{{mensaje2}} <br/></h1>
+ 
+   
+   
+  
+   
+</body>
+</html>
